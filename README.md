@@ -16,16 +16,16 @@ It provides a simple yet powerful interface for interacting with local or remote
 ---
 
 ## 🧩 Project Structure
-ChatInterface/
-├── app.py # Main Flask application
-├── templates/
-│ ├── index.html # Main chat interface
-│ └── login.html # User login page
-├── static/
-│ ├── css/ # Stylesheets
-│ └── js/ # Client-side scripts
-└── chat_history/
-└── user/ # Stored chat logs (JSON)
+  **ChatInterface**/
+  **├── app.py** # Main Flask application
+├── **templates**/
+│ ├── **index.html** # Main chat interface
+│ └── **login.html** # User login page
+├── **static**/
+│ ├── **css**/ # Stylesheets
+│ └── **js**/ # Client-side scripts
+└── **chat_history**/
+└── **user**/ # Stored chat logs (JSON)
 code
 Code
 ---
