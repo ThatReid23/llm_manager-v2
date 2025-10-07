@@ -28,7 +28,7 @@ It provides a simple yet powerful interface for interacting with local or remote
 └── **user**/ # Stored chat logs (JSON)
 code
 Code
----
+------------
 
 ## ⚙️ Installation
 
