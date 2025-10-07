@@ -30,7 +30,6 @@ It provides a simple yet powerful interface for interacting with local or remote
 └── chat_history/
     └── user/             # Stored chat logs (JSON)
   ```
----
 ## ⚙️ Installation
 
 1.  **Clone the repository**
