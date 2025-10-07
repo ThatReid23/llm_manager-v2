@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LLM Manager Dashboard</title>
+    <style>body{font-family:sans-serif;margin:0;background-color:#f8f9fa}header{background-color:#343a40;color:white;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}h1,h2{color:#343a40}.container{padding:2rem}.card{background:white;border:1px solid #dee2e6;border-radius:8px;padding:1.5rem;margin-bottom:1.5rem}.node-list,.client-keys{list-style:none;padding:0}.node-list li{display:flex;align-items:center;padding:.5rem;border-bottom:1px solid #eee}.status{padding:.2rem .5rem;border-radius:10px;color:white;margin-right:1rem;font-size:0.8rem}.status.online{background-color:#28a745}.status.offline{background-color:#dc3545}.model-tag{background-color:#007bff;color:white;padding:.2rem .5rem;border-radius:4px;margin-right:.5rem;font-size:.9rem}a{color:#007bff;text-decoration:none}</style>
+</head>
+<body>
+    <header>
+        <h3>LLM Manager Dashboard</h3>
+        <a href="/logout">Logout</a>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Configuration</h2>
+            <p><strong>Manager Host:</strong> {{ config.manager.host }}</p>
+            <p><strong>Manager Port:</strong> {{ config.manager.port }}</p>
+        </div>
+
+        <div class="card">
+            <h2>Client API Keys</h2>
+            <ul class="client-keys">
+                {% for key in config.client_api_keys %}
+                    <li><code>{{ key }}</code></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Inference Nodes</h2>
+            <ul class="node-list">
+                {% for node in nodes_status %}
+                <li>
+                    <span class="status {{ 'online' if node.online else 'offline' }}">{{ 'Online' if node.online else 'Offline' }}</span>
+                    <div>
+                        <strong>{{ node.name }}</strong> (<code>{{ node.address }}</code>)
+                        <br>
+                        <div>
+                            {% for model in node.models %}
+                            <span class="model-tag">{{ model }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

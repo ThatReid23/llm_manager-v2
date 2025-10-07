@@ -1,0 +1,34 @@
+# config.yaml (Simplified for Auto-Discovery)
+
+# Settings for the LLM Manager itself
+manager:
+  host: "0.0.0.0"
+  port: 8000
+  secret_key: "0000"
+
+# Credentials for the web management UI
+management_ui:
+  username: "admin"
+  password: "your_secure_password"
+
+# API keys that client applications use to talk TO this manager.
+client_api_keys:
+  - "89009"
+
+# The list of your backend LLM servers (inference nodes).
+# The 'models' list is no longer needed here!
+nodes:
+  # ------ Node 1: Your Primary Desktop Server ------
+  - name: "Primary Inference Server"
+    address: "http://127.0.0.1:1234"
+    api_key: ""
+
+  # ------ Node 2: Your Laptop Server ------
+  - name: "Laptop Inference Server"
+    address: "http://100.121.146.92:1234" 
+    api_key: ""
+
+  # ------ Node 2: Your Laptop Server ------
+  - name: "The8Reid Inference Server"
+    address: "http://100.76.139.23:1234" 
+    api_key: ""
