@@ -16,6 +16,8 @@ It provides a simple yet powerful interface for interacting with local or remote
 ---
 
 ## 🧩 Project Structure
+code
+code
   **ChatInterface**/
   **├── app.py** # Main Flask application
 ├── **templates**/
