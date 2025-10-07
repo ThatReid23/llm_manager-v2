@@ -16,8 +16,6 @@ It provides a simple yet powerful interface for interacting with local or remote
 ---
 
 ## 🧩 Project Structure
-code
-code
   **ChatInterface**/
 **├── app.py** # Main Flask application
 **├── **templates**/
@@ -28,8 +26,6 @@ code
 **│ └── **js**/ # Client-side scripts
 **└── **chat_history**/
 **└── **user**/ # Stored chat logs (JSON)
-code
-Code
 ------------
 
 ## ⚙️ Installation
